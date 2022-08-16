@@ -3,24 +3,20 @@ import NavBar from "./components/NavBar";
 import News from "./components/News";
 // import PropTypes from 'prop-types'
 
-export class App extends Component {
-  //   static propTypes = {
+export default class App extends Component {
+    //   static propTypes = {
 
-  //   }
+    //   }
 
-  render() {
-    return (
-      <div>
-        
-        <NavBar />
+    render() {
+        return (
+            <div>
+                <NavBar />
+                <News pageSize = {15} />
+            </div>
 
-        <div className="container my-3">
-            <h1 className="text-center mb-5"> <u>Taaza-Akhbaar - Top Headlines</u></h1>
-          <News pageSize = {15} />
-        </div>
-      </div>
-    );
-  }
+        )
+    }
 }
 
-export default App;
+// export default App;
