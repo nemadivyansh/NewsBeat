@@ -13,7 +13,8 @@ export class News extends Component {
 
 
         pageSize : 15, 
-        country : "in"
+        country : "in",
+        category: ""
     }
 
     static propTypes = {
@@ -39,7 +40,7 @@ export class News extends Component {
 
     async componentDidMount() {
 
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=${api_key}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api_key}&pageSize=${this.props.pageSize}`;
 
         this.setState ({loading: true});
 
@@ -59,7 +60,7 @@ export class News extends Component {
     handlePvsClick = async () => {
         console.log("pvs clicked");
 
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=${api_key}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api_key}&page=${this.state.page - 1}&pageSize=${this.props.pageSize}`;
 
         this.setState ({loading: true});
         
@@ -74,7 +75,7 @@ export class News extends Component {
     };
     handleNxtClick = async () => {
         console.log("next clicked");
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&apiKey=${api_key}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api_key}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`;
 
         this.setState ({loading : true});
         let data = await fetch(url);
