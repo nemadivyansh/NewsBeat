@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class NewsItem extends Component {
     render() {
-        let { title, description, imageUrl, newsUrl, publishedAt, source } = this.props;
+        let { title, description, imageUrl, newsUrl, publishedAt, source, author } = this.props;
 
         var a = publishedAt;
         var releaseInfo = new Date(a);
@@ -13,19 +13,24 @@ export default class NewsItem extends Component {
 
         return (
             <div>
-                <div className={`card ${this.props.mode==="dark"?"text-light":""} ${this.props.mode==="dark"? "bg-dark" : ""}`}>
-                    <span style={{ zIndex: "1", top: "-1.5%", left: "90%"}} class="position-absolute translate-middle badge rounded-pill bg-danger">
+                <div className={`card ${this.props.mode==="dark"?"text-light":""} ${this.props.mode==="dark"? "bg-dark" : ""}`} style = {{border : "6px double black"}}>
+                    <span style={{ zIndex: "1", top: "-1.5%", left: "90%"}} className="position-absolute translate-middle badge rounded-pill bg-danger" >
                         {source}
                     </span>
+                    <a href={newsUrl} target="_blank" rel="noopener noreferrer">
                     <img src={imageUrl} className="card-img-top" alt="..." />
+                    </a>
                     <div className="card-body">
                         <p className="card-text text-muted">
                             {releaseInfo}
                         </p>
+                        <p className="card-text text-muted">
+                        {author}
+                        </p>
                         <h5 className="card-title my-4">{title}</h5>
                         <p className="card-text">{description}</p>
 
-                        <a href={newsUrl} className="btn btn-sm btn-info d-flex justify-content-center" target="_blank" rel="noopener noreferrer">
+                        <a href={newsUrl} className="btn btn-sm btn-success" target="_blank" rel="noopener noreferrer">
                             Read More..
                         </a>
                     </div>

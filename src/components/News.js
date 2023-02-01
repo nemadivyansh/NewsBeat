@@ -31,7 +31,7 @@ export class News extends Component {
             loading: false,
             page: 1,
             pageNeed: '',
-        mode: "light"
+            mode: "light"
 
 
         }
@@ -95,7 +95,7 @@ export class News extends Component {
         return (
             <div className="container my-3">
                 <h1 className="text-center mb-5">
-                    <u>Taaza-Akhbaar - Top Headlines</u>
+                    <u>NewsBeat - {this.props.category} Headlines</u>
                 </h1>
 
                 {this.state.loading && <Spinner />}
@@ -120,6 +120,7 @@ export class News extends Component {
                                     publishedAt={element.publishedAt}
                                     source={element.source.name}
                                     mode={"light"}
+                                    author={`Author : ${element.author === null ? "(Unavailable)" : element.author}`}
                                 />
                             </div>
                         );
