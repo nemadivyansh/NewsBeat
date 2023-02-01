@@ -33,6 +33,39 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
+# Application Preview :
+: NewsBeat provides live news based on these categories 
+
+![image](https://user-images.githubusercontent.com/79587368/216055925-b5ae6ce2-9070-497d-b6bd-1c2d1376edb9.png)
+
+## Categories : 
+
+> 1. | Business | All top Business related Headlines - 
+
+![image](https://user-images.githubusercontent.com/79587368/216056328-91864499-08a6-4d32-a963-1fc3a67e181e.png)
+
+> 2. | Entertainment | All top Entertainment related Headlines - 
+
+![image](https://user-images.githubusercontent.com/79587368/216056704-cb3c6c4a-e303-4fbf-8c5e-71b4350f6b0f.png)
+
+> 3. | General | General Headlines - 
+
+![image](https://user-images.githubusercontent.com/79587368/216057279-97327811-5af6-48ff-a0b1-e599dd04e2ab.png)
+
+> 4. | Health | All top health related Headlines - 
+
+![image](https://user-images.githubusercontent.com/79587368/216057305-9f2f10d3-c019-40f7-8fe9-0d80006a7d96.png)
+
+
+## Read full news from original website by clicking read more : 
+![image](https://user-images.githubusercontent.com/79587368/202898406-32665940-bc0c-4e5f-bedb-f3ab00615011.png) ![image](https://user-images.githubusercontent.com/79587368/202898414-9dd884c2-bc6e-4d5c-9c66-ca3518e417d9.png)
+## Pagination : 
+ > Click previous to navigate to the previous page or next to navigate to the next page
+![image](https://user-images.githubusercontent.com/79587368/202898612-d7217513-4a17-4b05-9662-84ee49d2a135.png)
+
+
+
+
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
